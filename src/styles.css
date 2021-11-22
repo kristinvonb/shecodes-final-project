@@ -1,0 +1,74 @@
+body {
+  font-family: "Encode Sans", sans-serif;
+}
+
+h1,
+p,
+h2 {
+  text-align: center;
+}
+
+h1,
+#degrees {
+  margin-top: 30px;
+}
+
+h2,
+a,
+#strich,
+#degrees {
+  font-size: 25px;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+a,
+#strich {
+}
+p {
+  margin: 0;
+}
+
+#middle-part {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#display-windspeed {
+  margin-bottom: 40px;
+}
+
+#city-search,
+#submit-button,
+#current-location {
+  margin: 0 auto;
+  display: block;
+  margin-top: 60px;
+}
+#city-search {
+  margin-bottom: 5px;
+}
+
+#berlin {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.icon {
+  margin: 30px 0;
+}
+.degreeBorder {
+  border: 1px solid;
+  padding: 20px;
+}
+
+#celsius,
+#fahrenheit {
+  color: #596e79;
+  text-decoration: underline;
+}
+
+#celsius:hover,
+#fahrenheit:hover {
+  cursor: pointer;
+}
