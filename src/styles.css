@@ -14,9 +14,10 @@ h1,
 }
 
 h2,
-a,
 #strich,
-#degrees {
+#degrees,
+#celsius,
+#fahrenheit {
   font-size: 25px;
   margin-bottom: 30px;
   margin-top: 50px;
@@ -68,4 +69,7 @@ p {
 #celsius:hover,
 #fahrenheit:hover {
   cursor: pointer;
+}
+#open-source-text {
+  font-size: 10px;
 }
