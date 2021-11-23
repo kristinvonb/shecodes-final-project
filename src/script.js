@@ -1,4 +1,13 @@
-function formatDate(tag) {
+function formatDates(timestamp) {
+  let now = new Date(timestamp);
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
   let days = [
     "Sunday",
     "Monday",
@@ -8,21 +17,12 @@ function formatDate(tag) {
     "Friday",
     "Saturday",
   ];
-
-  let now = new Date();
-  let day = days[tag.getDay()];
-  let hour = now.getHours();
-  if (hour < 10) {
-    hour = `0${hour}`;
-  }
-  let minute = now.getMinutes();
-  if (minute < 10) {
-    minute = `0${minute}`;
-  }
+  let day = days[now.getDay()];
   let h3 = document.querySelector("h3");
   h3.innerHTML = `${day}, ${hour}:${minute}`;
 }
-formatDate(new Date());
+
+formatDates(new Date());
 
 function displayDegrees(response) {
   document.querySelector("#cities").innerHTML = response.data.name;
@@ -37,6 +37,10 @@ function displayDegrees(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+
+  document.querySelector("#date").innerHTML = formatDates(
+    response.data.dt * 1000
+  );
 }
 
 function searchCity(city) {
