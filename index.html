@@ -21,8 +21,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="src/styles.css" />
+   
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
@@ -54,7 +55,7 @@
       </div>
       </form> 
 <div class="row-6">
-   <h1 id="berlin"> </h1>
+   <h1 id="cities"> </h1>
 <div id="middle-part"> <span id="degrees"> 19  </span> <a hrf="#" id="celsius">°C  </a><span id="strich">| </span> <a hrf="#" id="fahrenheit">°F </a> </div>
 </div>
     <p id="description">cloudy</p>
@@ -63,7 +64,7 @@
     <h3>Current Time</h3>
     <div class="degreeBorder">
       <div class="row">
-        <div class="col-2 day">Wednesday</div>
+       <div class="col-2 day">Wednesday</div>
         <div class="col-2 day">Thursday</div>
         <div class="col-2 day">Friday</div>
         <div class="col-2 day">Saturday</div>
@@ -71,18 +72,12 @@
         <div class="col-2 day">Monday</div>
       </div>
       <div class="row">
-        <div class="col-2">
-          <i class="fa-solid fa-cloud icon"></i>
-        </div>
-        <div class="col-2">
-          <i class="fa-solid fa-sun icon"></i>
-        </div>
-        <div class="col-2"><i class="fa-solid fa-cloud icon"></i></div>
-        <div class="col-2"><i class="fa-solid fa-cloud-sun icon"></i></div>
-        <div class="col-2">
-          <i class="fa-solid fa-cloud-showers-heavy icon"></i>
-        </div>
-        <div class="col-2"><i class="fa-solid fa-sun icon"></i></div>
+        <div class="col-2 emoji">☀️ </div>
+        <div class="col-2 emoji">☀️</div>
+        <div class="col-2 emoji"> 🌧 </div>
+        <div class="col-2 emoji">☀️</div>
+        <div class="col-2 emoji"> 🌧 </div>
+        <div class="col-2 emoji"> ☁️</div>
       </div>
       <div class="row">
         <div class="col-2 degree">23°C</div>
@@ -94,7 +89,7 @@
       </div>
      
     </div>
- <div id="open-source-text"><a href="https://github.com/kristinvonb/shecodes-final-project">Open-source code </a>by Kristin Banse</div>
+ <div id="open-source-text"><a href="https://github.com/kristinvonb/shecodes-final-project" target="_blank">Open-source code </a>by Kristin Banse</div>
     <script type="text/javascript" src="src/script.js"></script>
   </body>
 </html>
