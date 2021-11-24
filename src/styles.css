@@ -1,5 +1,6 @@
 body {
   font-family: "Encode Sans", sans-serif;
+  background-color: #e0d8d3;
 }
 
 h1,
@@ -61,17 +62,17 @@ p {
   border-radius: 15px;
 }
 
-#celsius,
-#fahrenheit {
-  color: #596e79;
-  text-decoration: underline;
-}
-
-#celsius:hover,
-#fahrenheit:hover {
-  cursor: pointer;
-}
-
 #open-source-text {
   font-size: 10px;
+}
+
+#fahrenheit,
+#celsius {
+  text-decoration: underline;
+  color: #596e79;
+}
+
+#fahrenheit:hover,
+#celsius:hover {
+  cursor: pointer;
 }

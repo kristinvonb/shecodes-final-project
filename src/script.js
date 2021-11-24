@@ -25,10 +25,10 @@ function formatDates(timestamp) {
 formatDates(new Date());
 
 function displayDegrees(response) {
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#cities").innerHTML = response.data.name;
-  document.querySelector("#degrees").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#degrees").innerHTML = Math.round(celsiusTemperature);
 
   document.querySelector("#display-humidity").innerHTML =
     response.data.main.humidity;
@@ -58,18 +58,16 @@ function handleSearch(event) {
 
 function changeFahren(event) {
   event.preventDefault();
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#degrees");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round(temperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function changeCelsi(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#degrees");
   let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 function searchLocation(position) {
   let apiKey = "4269171b038b0f22bd54e3d3a844ae7e";
@@ -81,15 +79,18 @@ function getCurrentWeather(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+let celsiusTemperature = null;
+
+let searchForm = document.querySelector("search-form");
+searchForm = addEventListener("submit", handleSearch);
+
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", changeFahren);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", changeCelsi);
 
-let searchForm = document.querySelector("search-form");
-searchForm = addEventListener("submit", handleSearch);
-
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentWeather);
+
 searchCity("Berlin");
