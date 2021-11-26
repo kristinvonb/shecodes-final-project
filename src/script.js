@@ -59,7 +59,7 @@ function displayForecast(response) {
             forecastDay.temp.min
           )}° </span>
         </div>
-      </div>
+      </div>         
   `;
     }
   });
@@ -109,19 +109,6 @@ function handleSearch(event) {
   searchCity(city);
 }
 
-function changeFahren(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#degrees");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function changeCelsi(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#degrees");
-  let temperature = temperatureElement.innerHTML;
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
 function searchLocation(position) {
   let apiKey = "4269171b038b0f22bd54e3d3a844ae7e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -136,12 +123,6 @@ let celsiusTemperature = null;
 
 let searchForm = document.querySelector("search-form");
 searchForm = addEventListener("submit", handleSearch);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", changeFahren);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", changeCelsi);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentWeather);
