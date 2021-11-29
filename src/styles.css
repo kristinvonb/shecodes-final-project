@@ -72,3 +72,9 @@ p {
 #open-source-text {
   font-size: 10px;
 }
+
+#berlin {
+  text-align: center;
+  color: #596e79;
+  padding: 20px;
+}
