@@ -18,11 +18,8 @@ function formatDates(timestamp) {
     "Saturday",
   ];
   let day = days[now.getDay()];
-  let h3 = document.querySelector("h3");
-  h3.innerHTML = `${day}, ${hour}:${minute}`;
+  return `${day}, ${hour}:${minute}`;
 }
-
-formatDates(new Date());
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
