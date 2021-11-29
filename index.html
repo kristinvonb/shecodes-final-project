@@ -29,40 +29,43 @@
     <div class="container">
       <form id="search-form">
         <div class="row">
-          <div class="col-12">
-            <input
-              type="text"
-              autocomplete="off"
-              placeholder="search for your city"
-              id="city-search"
-              class="form-control"
-            />
-            <input
-              type="submit"
-              autocomplete="off"
-              input="submit"
-              id="submit-button"
-            />
-
-            <button class="btn btn-success w-300" id="current-location">
-              Current
-            </button>
-        </div>
+          <div class="col">
+          <input
+            type="text"
+            autocomplete="off"
+            placeholder="search for your city"
+            id="city-search"
+            class="form-control"
+          />
+           </div>
+            <div class="col">
+          <input
+            type="submit"
+            autocomplete="off"
+            input="submit"
+            id="submit-button"
+          />
+</div>
+<div class="col">
+          <button class="btn btn-success w-300" id="current-location">
+            Current
+          </button>
           </div>
+    </div>
       </form>
-      <div class="row-6">
-        <h1 id="cities"></h1>
-        <div id="middle-part">
-          <span id="degrees"> 19 </span> <span id="celsius">°C </span
-          >
-        </div>
+    
+    <div class="row-6">
+      <h1 id="cities"></h1>
+      <div id="middle-part">
+        <span id="degrees"> 19 </span> <span id="celsius">°C </span>
       </div>
-      <p id="description">cloudy</p>
-      <p>Humidity: <span id="display-humidity"> </span>%</p>
-      <p>Windspeed: <span id="display-windspeed"> </span> km/h</p>
-      <h3 id="local-time">Current Time</h3>
-      <div class="degreeBorder">
-        <div class="weather-forecast" id="forecast"></div>
+    </div>
+    <p id="description">cloudy</p>
+    <p>Humidity: <span id="display-humidity"> </span>%</p>
+    <p>Windspeed: <span id="display-windspeed"> </span> km/h</p>
+    <h3 id="local-time">Current Time</h3>
+    <div class="degreeBorder">
+      <div class="weather-forecast" id="forecast"></div>
     </div>
     <div id="open-source-text">
       <a

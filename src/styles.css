@@ -68,13 +68,12 @@ p {
   padding: 20px;
   border-radius: 15px;
 }
-
-#open-source-text {
-  font-size: 10px;
-}
-
 #berlin {
   text-align: center;
   color: #596e79;
   padding: 20px;
+}
+
+#open-source-text {
+  font-size: 10px;
 }
